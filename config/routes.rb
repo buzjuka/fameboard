@@ -1,9 +1,22 @@
 Rails.application.routes.draw do
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
+  #get 'inscriptions/index'
+  #
+  #get 'inscriptions/show'
+  #
+  #get 'inscriptions/new'
+ #
+ #post 'inscriptions/create'
+
+# delete 'inscriptions/destroy'
+  resources :inscriptions, only: [:index, :new, :create, :show, :destroy]
+
+  root :to => "inscriptions#index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

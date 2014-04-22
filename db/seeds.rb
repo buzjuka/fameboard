@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Inscription.create(positive: true, name: 'Temp1' , description: 'dkhkfshk hjhfsiughkjb hshsiugv sagsfsdg')
+Inscription.create(positive: false, name: 'Temp2' , description: 'dkhkfshk hjhfsiughkjb hshsiugv sagsfsdg')
+Inscription.create(positive: true, name: 'Temp3' , description: 'dkhkfshk hjhfsiughkjb hshsiugv sagsfsdg')
+Inscription.create(positive: false, name: 'Temp4' , description: 'dkhkfshk hjhfsiughkjb hshsiugv sagsfsdg')

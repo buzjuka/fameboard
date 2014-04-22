@@ -1,0 +1,11 @@
+<div class="modal fade" id="new" role="dialog" >
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+          <legend>Please Enter Your Details</legend>
+          <%= render 'form' %>
+            <%= button_to 'Close', inscriptions_path, method: :get, data: {dismiss: "modal",disable_with: 'loading...'}, :class => "btn btn-default" %>
+      </div>
+    </div>
+  </div>
+</div>
