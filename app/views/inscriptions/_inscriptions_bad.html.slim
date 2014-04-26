@@ -1,0 +1,12 @@
+#bad
+ .col-md-6
+   table class="table table-condensed"
+    tr
+      th Name
+      th colspan="2" Description
+    - @inscriptions.each do |t|
+        - unless t.positive
+          tr class="danger"
+            td = t.name
+            td = truncate(t.description, lenght: 120)
+            td = link_to "show", t, remote: true, data: {toggle: "tooltip",placement: "right"}, title: "show this inscription"

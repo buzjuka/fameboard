@@ -1,0 +1,7 @@
+#new.modal.fade role="dialog"
+  .modal-dialog
+    .modal-content
+      .modal-header
+          legend Please Enter Your Details
+          == render 'form'
+          = button_to 'Close', inscriptions_path, method: :get, data: {dismiss: "modal",disable_with: 'loading...'}, class: "btn btn-default"

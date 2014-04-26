@@ -1,7 +1,7 @@
 class InscriptionsController < ApplicationController
   before_action :set_inscription, only: [:show, :destroy]
+  before_action :set_inscriptions, only: [:index, :create, :destroy]
   def index
-    @inscriptions=Inscription.all
   end
 
   def show
@@ -12,23 +12,27 @@ class InscriptionsController < ApplicationController
   end
 
   def create
-    @inscription=Inscription.new(inscription_params)
+    @inscription = Inscription.new(inscription_params)
     if @inscription.save
-      redirect_to inscriptions_url
+      render "index_update"
     else
-      render action: 'new'
+      render "new_errors"
     end
   end
 
   def destroy
     @inscription.destroy
-    return redirect_to inscriptions_url
+    return render "index_update"
   end
 
 private
 
   def set_inscription
     @inscription = Inscription.find(params[:id])
+  end
+
+  def set_inscriptions
+    @inscriptions=Inscription.all
   end
 
   def inscription_params

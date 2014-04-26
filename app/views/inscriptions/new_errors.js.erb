@@ -1,0 +1,8 @@
+$('.form-group').removeClass('has-error');
+<% @inscription.errors.keys.each do |field|   %>
+    <% if (field.to_s == 'name') %>
+        $("#name").addClass('has-error');
+    <% else %>
+        $("#description").addClass('has-error');
+    <% end %>
+<% end %>

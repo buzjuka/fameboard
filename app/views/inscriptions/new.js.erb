@@ -1,2 +1,5 @@
-$('body').append("<%= j(render 'modal_new') %>")
-$('#new').modal();
+$('#replace').html("<%= j(render 'modal_new') %>")
+$('.modal-backdrop').remove()
+//var mod_if = $('#error').html()
+//if (typeof( mod_if ) == 'undefined'){
+  $('#new').modal();

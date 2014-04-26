@@ -1,0 +1,9 @@
+.container
+  h1 Inscriptions
+  .row
+    h3 class="col-md-6" Good
+    h3 class="col-md-6"Bad
+    == render 'inscriptions_good'
+    == render 'inscriptions_bad'
+  = button_to 'Add Inscription', new_inscription_path, method: :get, remote: true, data: {disable_with: 'loading...', toggle: "tooltip",placement: "right"}, class: "btn btn-default", title: "add new inscriptions"
+#replace
