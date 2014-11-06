@@ -45,6 +45,8 @@ gem 'activeadmin', github: 'gregbell/active_admin'
 
 gem "slim-rails"
 gem 'app'
+gem 'delayed_job_active_record'
+gem 'daemons'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0.beta'
