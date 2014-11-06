@@ -44,6 +44,7 @@ gem 'bootstrap-sass', '~> 3.1.1'
 gem 'activeadmin', github: 'gregbell/active_admin'
 
 gem "slim-rails"
+gem 'app'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0.beta'

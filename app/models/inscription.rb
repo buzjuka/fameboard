@@ -7,6 +7,6 @@ class Inscription < ActiveRecord::Base
 
 private
   def send_self_to_commander
-    Commander.send_event(self)
+    CommanderService.send_event(self)
   end
 end
