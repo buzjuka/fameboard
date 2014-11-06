@@ -1,0 +1,13 @@
+= form_for(@inscription, { remote: true}) do |f|
+    #name.form-group
+      = f.label :name, class: "control-label"
+      = f.text_field :name, size: 40, class: "form-control", placeholder: "Enter name"
+    #description.form-group
+      = f.label :description, class: "control-label"
+      = f.text_area :description, rows: 4, cols: 40, class: "form-control", placeholder: "Enter description"
+    .form-group
+      = f.label :positive, class: "control-label"
+      = f.select(:positive, Inscription::TYPE, {prompt: 'Select type inscription'}, {class: "form-control"}, )
+    .form-group
+      = f.submit 'Place Inscription', data: {disable_with: 'loading...'}, class: "btn btn-default"
+
