@@ -1,0 +1,33 @@
+<div class="modal fade" id="show_<%=@inscription.id%>" role="dialog" >
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <% if @inscription.positive %>
+            <%- str='Good' %>
+        <% else %>
+            <%- str='Bad' %>
+        <% end %>
+        <h4 class="modal-title"><%= str %> Inscription <%= @inscription.name %></h4>
+      </div>
+      <div class="modal-body">
+
+      <strong>Description:</strong>
+      <div class="text-muted"><%= @inscription.description %></div>
+
+      <div class="modal-footer">
+        <div class="row">
+          <div class="col-md-8"></div>
+          <div class="col-md-2">
+      <%= button_to 'Delete', @inscription, method: :delete,
+                    data: {confirm: 'Are you sure?', disable_with: 'loading...'}, :class => "btn btn-default" %>
+            </div>
+            <div class="col-md-2">
+        <%= button_to 'Close', inscriptions_path, method: :get,
+                      data: {dismiss: "modal", disable_with: 'loading...'}, :class => "btn btn-default" %>
+            </div>
+            </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
