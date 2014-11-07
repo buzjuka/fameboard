@@ -36,6 +36,6 @@ private
   end
 
   def inscription_params
-    params.require(:inscription).permit(:positive, :name, :description )
+    params.require(:inscription).permit(:positive, :name, :description, :user )
   end
 end
